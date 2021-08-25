@@ -7,25 +7,25 @@ import IndexScreen from "./src/screens/IndexScreen";
 import ShowScreen from "./src/screens/ShowScreen";
 
 const navigator = createStackNavigator(
-    {
-        Index: IndexScreen,
-        Show: ShowScreen,
-        Create: CreateScreen,
+  {
+    Index: IndexScreen,
+    Show: ShowScreen,
+    Create: CreateScreen,
+  },
+  {
+    initialRouteName: "Index",
+    defaultNavigationOptions: {
+      title: "Blogs",
     },
-    {
-        initialRouteName: "Index",
-        defaultNavigationOptions: {
-            title: "Blogs",
-        },
-    }
+  }
 );
 
 const App = createAppContainer(navigator);
 
 export default () => {
-    return (
-        <Provider>
-            <App />
-        </Provider>
-    );
+  return (
+    <Provider>
+      <App />
+    </Provider>
+  );
 };
